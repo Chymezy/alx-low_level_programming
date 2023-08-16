@@ -1,9 +1,10 @@
 /*
  * File: 101-natural.c
- * Auth: chymezy 
+ * Auth: chymezy
  */
 
 #include <stdio.h>
+
 
 /**
  * main - Lists all the natural numbers below 1024 (excluded)

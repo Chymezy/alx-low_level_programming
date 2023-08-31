@@ -1,6 +1,6 @@
-# Low Level Programming
+# 0x07. C - Even more pointers, arrays and strings
 
-This repository contain Alx projects on low-level programing.
+This project is centered on finding and fixing error in software that prevents it from running correctly. Here you learn debugging tools and built-in tools for fixing errors in codes.
 
 ## Table of Contents
 
@@ -14,34 +14,20 @@ This repository contain Alx projects on low-level programing.
 
 ## About
 
-Welcome to the realm of low-level programming, where intricate details drive computing. Delve into hardware workings, crafting software directly interacting with machine architecture. Low-level programming empowers developers for optimal system use, from memory management to efficient algorithms. Through assembly and systems programming, grasp memory addresses, registers, and instruction sets, fueling high-performance software. This repository delves into low-level programming's art and science, revealing code-machine translation and software-hardware dynamics. Whether enhancing expertise or venturing beyond abstractions, find abundant resources, tutorials, and examples here for your low-level programming journey.
-
-### Exploring Low-Level Programming with C
-
-## Key Topics Covered
-
-- Introduction to low-level programming in C
-- Pointers, memory allocation, and data manipulation
-- Bitwise operations and binary representation
-- CPU architecture, registers, and instruction sets
-- Systems programming and interfacing with the operating system
-- Performance optimization and profiling techniques
-
+ It’s important to understand the concepts and processes of debugging manually. As a deveops student this will come handy when working in the industry.
 
 ## Features
 
-- Data types 
-- Variables
-- If - Else Statements
-- Loops (while and for loops)
-- Functions 
+- Debugging
+- Rubber Duck Debugging
 
 ## Installation
 
-This is not applicable 
+N/A
 
 ```bash
-git clone https://github.com/Chymezy/alx-low_level_programming.git
-cd alx-low_level_programming
+
+git clone https://github.com/Chymezy/yourproject.git
+cd 0x03-debugging
 npm install
 

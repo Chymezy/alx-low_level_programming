@@ -1,23 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _puts - Prints a string to stdout
- * @str: The string to print
+ * _puts -a function that prints a string
+ *
+ * @str: the string value to be printed
+ *
+ * Return: void
  */
+
 void _puts(char *str)
 {
-	puts(str);
-}
+	int i;
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	_puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	for (i = 0 ; str[i] != '\0' ; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
-

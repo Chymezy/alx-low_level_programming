@@ -25,7 +25,7 @@ char *create_array(unsigned int size, char c)
 
 	while (k < size)
 	{
-		array[k] = c;
+		container[k] = c;
 		k++;
 	}
 

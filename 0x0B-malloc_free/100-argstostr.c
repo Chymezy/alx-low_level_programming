@@ -1,45 +1,54 @@
 #include <stdlib.h>
-#include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 
 /**
- * argstostr - combines all arugments passed with program
- * @ac: number of arugments
- * @av: array of arguments
+ * argstostr - Concatenates all the arguments of a program.
+ * @ac: The number of arguments.
+ * @av: An array of argument strings.
  *
- * Return: Pointer to a new string or NULL if it fails
+ * Return: A pointer to a new concatenated string or NULL on failure.
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, total = 0, count = 0;
-	char *s;
+	/* Declare variables at the beginning of the function */
+	int i;
+	int j;
+	int avLength = 0;
+	char *resultant;
+	int position = 0;
 
-	if (ac == 0 || av == 0)
+	/* Check if ac or av is NULL */
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	/* Calculate the total length of strings in av (array of string is a 2D array of char) */
+	for (i = 0; av[i] != NULL; i++)
 	{
-		for (j = 0; av[i][j] != '\0';)
-			j++;
-		total += j;
-	}
-	s = (char *)malloc((total + 1));
-	if (s == NULL)
-	{
-		free(s);
-		return (NULL);
-	}
-	for (i = 0; i < ac; i++)
-	{
-		s[count] = '\n';
-		for (j = 0; av[i][j] != '\0'; count++, j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			s[count] = av[i][j];
+			avLength++;
 		}
-		s[count] = '\n';
-		count++;
-
+		avLength++; /* Add extra 1 for newlines */
 	}
-	return (s);
 
+	/* Allocate memory to the resulting string */
+	resultant = (char *)malloc(sizeof(char) * avLength + 1);
+
+	/* Check if memory was allocated accurately */
+	if (resultant == NULL)
+		return (NULL); /* No need to free resultant here */
+
+	/* Concatenate the strings together */
+	for (i = 0; av[i] != NULL; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			resultant[position++] = av[i][j]; /* Combine characters inside strings */
+		}
+		resultant[position++] = '\n'; /* Add newline after each string */
+	}
+	resultant[position] = '\0'; /* Null-terminate the resulting string */
+
+	return (resultant);
 }
+

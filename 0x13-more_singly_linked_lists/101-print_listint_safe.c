@@ -24,7 +24,7 @@ const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 	}
 	for (k = 0; k < size - 1; k++)
 		newlist[k] = list[k];
-	newlist[i] = new;
+	newlist[k] = new;
 	free(list);
 	return (newlist);
 }

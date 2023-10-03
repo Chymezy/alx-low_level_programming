@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	{
 		len_read = read(fd_from, buffer, 1024);
 		verify98(len_read, argv[1], fd_from, fd_to);
-		len_write = write(fd_to, buffer, lenr);
+		len_write = write(fd_to, buffer, len_read);
 		if (len_write != len_read)
 			len_write = -1;
 		verify99(len_write, argv[2], fd_from, fd_to);

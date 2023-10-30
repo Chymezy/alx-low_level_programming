@@ -8,11 +8,11 @@
  */
 size_t _strlen(char *str)
 {
-i	size_t k;
+	size_t i;
 
-	for (k = 0; str[k]; k++)
+	for (i = 0; str[i]; i++)
 		;
-	return (k);
+	return (i);
 }
 
 /**
@@ -39,3 +39,4 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	return (1);
 }
+
